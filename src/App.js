@@ -7,21 +7,21 @@ import Products from "./Components/Products";
 
 const Home = () => (
   <div>
-    <h2>Home</h2>
+    <h2 style={{color:"purple", backgroundColor:"cyan", width:"20%", textAlign:"center"}}>Home</h2>
   </div>
 );
 
 const Admin = () => (
   <div>
-    <h2>Welcome admin!</h2>
+    <h2 style={{color:"red", backgroundColor:"yellow", width:"20%",textAlign: "center"}}>Welcome admin</h2>
   </div>
 );
 
 export default function App() {
   return (
     <div>
-      <nav className="navbar navbar-light">
-        <ul className="nav navbar-nav">
+      
+        <ul style={{fontSize:"larger",marginBottom:"50px"}}>
           <li>
             <Link to="/">Home</Link>
           </li>
@@ -35,12 +35,14 @@ export default function App() {
             <Link to="/admin">Admin area</Link>
           </li>
         </ul>
-      </nav>
+      
 
       <Switch>
         <Route exact path="/">
           <Home />
         </Route>
+
+        
         <Route path="/category">
           <Category />
         </Route>
@@ -48,7 +50,11 @@ export default function App() {
         <Route path="/products">
           <Products />
         </Route>
-    
+
+        <Route  path="/">
+          <Admin />
+        </Route>
+           
       </Switch>
     </div>
   );

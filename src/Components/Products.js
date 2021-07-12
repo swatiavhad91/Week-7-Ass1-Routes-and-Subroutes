@@ -13,10 +13,10 @@ const Products = () => {
     },
     {
       id: 2,
-      name: "Stylised Flip Flops and Slippers",
+      name: "U.S. POLO ASSN, Slippers",
       description:
         "Mauris finibus, massa eu tempor volutpat, magna dolor euismod dolor.",
-      status: "Out of Stock"
+      status: "Available"
     },
     {
       id: 3,
@@ -27,7 +27,7 @@ const Products = () => {
     },
     {
       id: 4,
-      name: "ADIDAS Mid Sneakers",
+      name: "Lee Cooper Mid Sneakers",
       description:
         "Ut hendrerit venenatis lacus, vel lacinia ipsum fermentum vel. Cras.",
       status: "Out of Stock"
@@ -36,8 +36,8 @@ const Products = () => {
 
   const { url } = useRouteMatch();
 
-  /* Create an array of `<li>` items for each product */
-  const linkList = productData.map((product) => {
+  
+  const List = productData.map((product) => {
     return (
       <li key={product.id}>
         <Link to={`${url}/${product.id}`}>{product.name}</Link>
@@ -52,14 +52,15 @@ const Products = () => {
           style={{
             float: "left",
             padding: "10px",
-            width: "30%",
-            background: "#f0f0f0",
-            marginLeft: "auto"
+            width: "20%",
+            background: "pink",
+            
+            
           }}
         >
           <h3>Products</h3>
-          <ul style={{ listStyleType: "none", padding: 0, fontSize: "15px" }}>
-            {linkList}
+          <ul style={{ fontSize: "15px" }}>
+            {List}
           </ul>
         </div>
       </div>

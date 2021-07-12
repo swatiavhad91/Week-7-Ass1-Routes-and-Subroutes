@@ -23,9 +23,10 @@ const Product = ({ data }) => {
     <div style={{ display: "flex" }}>
       <div
         style={{
-          width: "80%",
+          width: "50%",
           margin: "auto",
-          background: "#ffffff"
+          background: "skyblue",
+          padding:"10px"
         }}
       >
         {productData}

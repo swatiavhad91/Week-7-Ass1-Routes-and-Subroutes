@@ -6,7 +6,7 @@ const Item = () => {
 
   return (
     <div>
-      <h3>{name}</h3>
+      <h3 style={{color:"blue", backgroundColor:"pink", width:"20%",textAlign: "center"}}>{name}</h3>
     </div>
   );
 }
